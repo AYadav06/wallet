@@ -16,12 +16,14 @@ async function createUserTable() {
         password VARCHAR(255) UNIQUE NOT NULL,
         created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
         );`);
+    console.log(result);
 }
 async function createAccountTable() {
     const result = await db_1.default.query(`
-        CREATE TABLE account(
+        CREATE TABLE IF NOT EXISTS account(
         id SERIAL PRIMARY KEY,
         balance INT
         );`);
+    console.log(result);
 }
 //# sourceMappingURL=db.js.map

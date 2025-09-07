@@ -14,7 +14,7 @@ export async function createUserTable(){
 }
  export async function createAccountTable(){
     const result=await client.query(`
-        CREATE TABLE account(
+        CREATE TABLE IF NOT EXISTS account(
         id SERIAL PRIMARY KEY,
         balance INT
         );`)
