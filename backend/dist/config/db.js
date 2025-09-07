@@ -18,7 +18,8 @@ async function connectDB() {
         (0, db_1.createAccountTable)();
     }
     catch (error) {
-        console.log("error while db is connection ", error);
+        console.log("error while db is connection ");
+        process.exit(1);
     }
 }
 exports.default = client;

@@ -17,7 +17,7 @@ export async function connectDB() {
     } 
     catch (error){
         console.log("error while db is connection ",error);
-        
+        process.exit(1);
     }
 }
 export default client;
