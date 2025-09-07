@@ -7,6 +7,7 @@ exports.ENV = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 exports.ENV = {
-    DB_URL: process.env.DB_URL
+    DB_URL: process.env.DB_URL,
+    JWT_SECRET: process.env.JWT_SECRET,
 };
 //# sourceMappingURL=Env.js.map
