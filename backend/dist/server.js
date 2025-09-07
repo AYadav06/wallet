@@ -6,11 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const routes_1 = require("./routes");
 const cors_1 = __importDefault(require("cors"));
+const db_1 = require("./config/db");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use("/api/v1/", routes_1.router);
 app.listen(3000, () => {
+    (0, db_1.connectDB)();
     console.log("server is running on port :3000");
 });
 //# sourceMappingURL=server.js.map

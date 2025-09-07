@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateUser = exports.signinUser = exports.createUser = void 0;
-const createUser = (req, res) => {
-    res.send("hello user is created");
+const createUser = async (req, res) => {
 };
 exports.createUser = createUser;
 const signinUser = () => {
